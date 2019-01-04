@@ -1,0 +1,9 @@
+version: '3'
+services:
+  clawer:
+    build: .
+    restart: always
+    volumes:
+    - ./:/repo
+    - ~/.ssh/id_rsa:/root/.ssh/id_rsa:ro
+    - ~/.gitconfig:/root/.gitconfig:ro
